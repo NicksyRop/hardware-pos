@@ -50,7 +50,7 @@ Route::get('/new_user','hardware@accounts');
 Route::get('/sales','hardware@mysales');
 Route::get('/reports','hardware@myreports');
 Route::any('/repo','hardware@reports_generate');
-Route::any('/login','hardware@user_login');
+Route::any('/login','hardware@user_login')->name('login');
 Route::get('/generate_invoice','hardware@generate_invoice');
-Route::any('/logout',"hardware@sign_out");
+Route::any('/logout',"hardware@sign_out")->name('logout');
 

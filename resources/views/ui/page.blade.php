@@ -11,7 +11,7 @@
               <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="confirm('Are you sure to Logout?');" href="logout">Logout</a>
+              <a class="nav-link" onclick="confirm('Are you sure to Logout?');" href="{{ route('logout')}}">Logout</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -17,7 +17,7 @@ use Validator;
 class hardware extends Controller
 {
 
-  
+
     public function index(){
     return $this->check_logged_in();
     }
@@ -37,7 +37,7 @@ class hardware extends Controller
 
     function user_login(Request $request){
         $user=array(
-            'username'=>$request->input('username'),    
+            'username'=>$request->input('username'),
             'password'=>$request->input('password')
         );
         $login=DB::table('users')->where($user)->get();
@@ -48,14 +48,14 @@ class hardware extends Controller
            $name=$value->name;
            $user=$value->username;
        }
-        session()->put("username",$name);  
-        session()->put("permission",$permission); 
-        session()->put("login_user",$user); 
-        return view('ui.dashboard'); 
+        session()->put("username",$name);
+        session()->put("permission",$permission);
+        session()->put("login_user",$user);
+        return view('ui.dashboard');
         }
         else{
         $request->session()->flash("login","Wrong username or password");
-         return view('ui.login');  
+         return view('ui.login');
         }
     }
     function shop(){
@@ -144,7 +144,7 @@ array_push($arr, $var);
     public function clear(){
          $this->check_logged_in();
         \Cart::clear();
-        return redirect()->route('cart')->with('success_msg', 'Car is cleared!');
+        return redirect()->route('cart.index')->with('success_msg', 'Car is cleared!');
     }
     public function mystock(){
          $this->check_logged_in();
@@ -168,7 +168,7 @@ array_push($arr, $var);
         $stock=json_decode(json_encode($getstock));
         return view('ui.pos',["stock"=>$stock]);
     }
-    
+
     public function delete_item(Request $request){
         $this->check_logged_in();
         $id=$request->input('delete_item');
@@ -215,13 +215,13 @@ $getstock=DB::table("users")->paginate(3);
     		$getstock=DB::table("stock")->get();
     	$stock=json_decode(json_encode($getstock));
  if($res){
- 	
+
 	return view('ui.stock',['upmessage'=>'updated successfully',"stock"=>$stock]);
 }
 else{
 	return view('ui.stock',['upmessage'=>'Failed to update Item',"stock"=>$stock]);
 }
-    		
+
     	}else if($id==""){
     	$all=array(
     		"name"=>$request->input("name"),
@@ -269,7 +269,7 @@ if (count($res)>0) {
     }
     else{
          $request->session()->flash("newmess","Failed to add Account Try Again!");
-      return view('ui.addaccount');  
+      return view('ui.addaccount');
     }
 }
 
@@ -288,7 +288,7 @@ if (count($res)>0) {
         $update=DB::table('users')->where($username)->update($details);
         if ($update) {
             $request->session()->flash("newmess","Account Updated successfully");
- return view('ui.addaccount'); 
+ return view('ui.addaccount');
         }else{
              $request->session()->flash("newmess","Failed to Update account");
  return view('ui.addaccount');
