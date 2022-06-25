@@ -41,22 +41,22 @@ class hardware extends Controller
             'password'=>$request->input('password')
         );
         $login=DB::table('users')->where($user)->get();
-        if (count($login)>0) {
-            $details=json_decode($login);
-       foreach ($details as $key => $value) {
-           $permission=$value->permission;
-           $name=$value->name;
-           $user=$value->username;
-       }
+//         if (count($login)>0) {
+//             $details=json_decode($login);
+//        foreach ($details as $key => $value) {
+//            $permission=$value->permission;
+//            $name=$value->name;
+//            $user=$value->username;
+//        }
         session()->put("username",$name);
         session()->put("permission",$permission);
         session()->put("login_user",$user);
         return view('ui.dashboard');
-        }
-        else{
-        $request->session()->flash("login","Wrong username or password");
-         return view('ui.login');
-        }
+//         }
+//         else{
+//         $request->session()->flash("login","Wrong username or password");
+//          return view('ui.login');
+//         }
     }
     function shop(){
          $this->check_logged_in();
