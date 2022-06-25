@@ -36,11 +36,11 @@ class hardware extends Controller
     }
 
     function user_login(Request $request){
-        $user=array(
-            'username'=>$request->input('username'),
-            'password'=>$request->input('password')
-        );
-        $login=DB::table('users')->where($user)->get();
+//         $user=array(
+//             'username'=>$request->input('username'),
+//             'password'=>$request->input('password')
+//         );
+//         $login=DB::table('users')->where($user)->get();
 //         if (count($login)>0) {
 //             $details=json_decode($login);
 //        foreach ($details as $key => $value) {
@@ -48,9 +48,9 @@ class hardware extends Controller
 //            $name=$value->name;
 //            $user=$value->username;
 //        }
-        session()->put("username",$name);
-        session()->put("permission",$permission);
-        session()->put("login_user",$user);
+//         session()->put("username",$name);
+//         session()->put("permission",$permission);
+//         session()->put("login_user",$user);
         return view('ui.dashboard');
 //         }
 //         else{
