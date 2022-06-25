@@ -31,8 +31,5 @@ Hardware Point of Sales is a web based application used to manage a hardware.The
 * Run php artisan migrate.
 * Run php artisan serve
 
-## Credits
-Collaborator
-*  [Michael Selunani](https://github.com/mse-lunani)
 ## License
 MIT
