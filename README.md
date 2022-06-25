@@ -5,7 +5,7 @@
 Hardware POS
 
 ## Live Link
-Access the application  
+Access the application [here](https://hardwareapplication.herokuapp.com/)
 
 ## About the Project
 Hardware Point of Sales is a web based application used to manage a hardware.The application allows hardware attendance add new products to store , edit and delete products.It has a nice user interface where one can search for products add to cart ,calcutate totals and prints a receipt to the customer.
