@@ -17,7 +17,7 @@ Hardware Point of Sales is a web based application used to manage a hardware.The
 ### Dashboard
 ![Products](https://res.cloudinary.com/kenya-power/image/upload/v1663782806/hardware/Screenshot_166_dq1wr3.png)
 ### cart
-![cart](https://res.cloudinary.com/kenya-power/image/upload/v1656417743/online-shop/screeens/Screenshot_2022-06-28-14-57-55-751_host.exp.exponent_muzsgy.jpg)
+![cart](https://res.cloudinary.com/kenya-power/image/upload/v1663782806/hardware/Screenshot_170_dba6tq.png)
 ### Recipt
  ![Receipt](https://res.cloudinary.com/kenya-power/image/upload/v1663782807/hardware/Screenshot_171_c7dskn.png)
 ### Print Reciept
