@@ -19,6 +19,7 @@ Hardware Point of Sales is a web based application used to manage a hardware.The
 * Php (Laravel)
 * HTML
 * CSS
+* Bootsrtap
 * Mysql
 
 ## Setup / Installation
